@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Actor.h"
 
 
 class Map
@@ -7,11 +8,12 @@ class Map
 private:
 	int sizeX; // width
 	int sizeY; // height
+	Actor* player;
 
 protected:
 
 public:
-	Map(int width, int height);
+	Map(int width, int height, Actor* plr);
 
 	void PrintMap();
 };

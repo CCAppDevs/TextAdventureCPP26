@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="TextAdventure/TextAdventure.vcxproj" />
+  <Project Path="TextAdventure/TextAdventure.vcxproj" Id="2c71c3e5-cb87-4f3e-9cb6-992b03343c6e" />
 </Solution>
