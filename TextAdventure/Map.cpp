@@ -20,11 +20,15 @@ void Map::PrintMap()
 	{
 		for (int x = 0; x < this->sizeX; x++)
 		{
-			// TODO: check if player is here and then respond.
-			// if player is here (print P)
-			// else print empty room
-			// print a room
-			cout << "[ ]";
+			if (player->GetPosition().Equals(x, y))
+			{
+				// print p for player
+				cout << "[P]";
+			}
+			else
+			{
+				cout << "[ ]";
+			}
 		}
 		// hit enter
 		cout << endl;

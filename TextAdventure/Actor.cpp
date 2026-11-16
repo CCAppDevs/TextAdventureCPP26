@@ -1,7 +1,8 @@
 #include "Actor.h"
 
-Actor::Actor(int x, int y)
+Actor::Actor(std::string name, int x, int y)
 {
+	this->Name = name;
 	this->PositionX = x;
 	this->PositionY = y;
 }

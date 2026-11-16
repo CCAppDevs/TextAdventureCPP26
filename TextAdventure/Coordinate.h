@@ -7,5 +7,6 @@ public:
 	int Y;
 
 	Coordinate(int x, int y);
+	bool Equals(int x, int y);
 };
 

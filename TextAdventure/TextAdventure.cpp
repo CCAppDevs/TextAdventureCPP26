@@ -9,7 +9,7 @@ void Pause();
 
 int main()
 {
-    Actor player = Actor(0, 0);
+    Actor player = Actor(3, 3);
     Map myMap = Map(10, 10, &player);
 
     bool isPlaying = true;
