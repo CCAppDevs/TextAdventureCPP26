@@ -12,16 +12,18 @@ protected:
 	int MaxHealth;
 
 public:
-	// move
-	// attack
-	// flee
-	// defend
-	// isDead
+	Character(std::string name, int x, int y, int maxHealth);
 
-	// get health
-	// set health
-	// attack power (derive)
-	// magic power (derive)
-	// defense (derive)
+	void Move(int x, int y);
+	void Attack(Character& target, int damage);
+	void TakeDamage(Character& source, int amount);
+	bool Flee();
+	void Defend();
+	bool IsDead();
+	int GetHealth();
+	void SetHealth(int newHealth);
+	int GetAttackPower();
+	int GetMagicPower();
+	int GetDefense();
 };
 

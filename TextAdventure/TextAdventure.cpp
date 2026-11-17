@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Map.h"
 #include "Actor.h"
+#include "Character.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ void Pause();
 
 int main()
 {
-    Actor player = Actor(3, 3);
+    Character player = Character("Jesse", 3, 3, 100);
     Map myMap = Map(10, 10, &player);
 
     bool isPlaying = true;
@@ -29,14 +30,10 @@ int main()
             isPlaying = false;
             cout << "Thanks for playing. Exiting.\n";
         }
-        else if (choice == "toast")
+        else if (choice == "south")
         {
-            cout << "YEAH TOAST!!!!\n";
-
-            for (int i = 0; i < 50; i++)
-            {
-                cout << i << endl;
-            }
+            cout << "Moving South\n";
+            player.Move(player.PositionX, player.PositionY + 1);
         }
 
         Pause();
