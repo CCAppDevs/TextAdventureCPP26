@@ -5,6 +5,17 @@ Map::Map(int width, int height, Actor* plr)
 	this->sizeX = width;
 	this->sizeY = height;
 	this->player = plr;
+	this->rooms = vector<vector<Room>>();
+
+	for (int y = 0; y < this->sizeY; y++)
+	{
+		this->rooms.push_back(vector<Room>());
+		for (int x = 0; x < this->sizeX; x++)
+		{
+			// create a room
+			this->rooms[y].push_back(Room("Test", true, true));
+		}
+	}
 }
 
 void Map::PrintMap()

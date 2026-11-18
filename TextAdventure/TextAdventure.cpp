@@ -2,6 +2,7 @@
 #include "Map.h"
 #include "Actor.h"
 #include "Character.h"
+#include "Direction.h"
 
 using namespace std;
 
@@ -34,6 +35,21 @@ int main()
         {
             cout << "Moving South\n";
             player.Move(player.PositionX, player.PositionY + 1);
+        }
+        else if (choice == "north")
+        {
+            cout << "Moving North\n";
+            player.Move(player.PositionX, player.PositionY - 1);
+        }
+        else if (choice == "east")
+        {
+            cout << "Moving East\n";
+            player.Move(player.PositionX + 1, player.PositionY);
+        }
+        else if (choice == "west")
+        {
+            cout << "Moving West\n";
+            player.Move(player.PositionX - 1, player.PositionY);
         }
 
         Pause();
