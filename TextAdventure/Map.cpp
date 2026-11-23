@@ -2,24 +2,21 @@
 #include "EmptyRoom.h"
 #include "MonsterRoom.h"
 
-Map::Map(int width, int height, Actor* plr)
+Map::Map(int width, int height, Actor* plr, mt19937* gen)
 {
 	this->sizeX = width;
 	this->sizeY = height;
 	this->player = plr;
 	this->rooms = vector<vector<Room>>();
+	this->randomGen = gen;
 
 	for (int y = 0; y < this->sizeY; y++)
 	{
 		this->rooms.push_back(vector<Room>());
 		for (int x = 0; x < this->sizeX; x++)
 		{
-			// TODO: fix randomness
-			// seed the random number generator
-			srand(time(0));
-
 			// roll a number between 0-100
-			int randomRoll = rand() % 101;
+			int randomRoll = rand() % 101; // TODO: add the mt gen to this roll
 
 			if (randomRoll < 10)
 			{

@@ -3,6 +3,7 @@
 #include "Actor.h"
 #include "Character.h"
 #include "Direction.h"
+#include <random>
 
 using namespace std;
 
@@ -13,6 +14,10 @@ int main()
 {
     Character player = Character("Jesse", 3, 3, 100);
     Map myMap = Map(10, 10, &player);
+
+    // define a random number generator
+    random_device rd;
+    mt19937 gen(rd);
 
     bool isPlaying = true;
 

@@ -3,6 +3,7 @@
 #include "Actor.h"
 #include <vector>
 #include "Room.h"
+#include <random>
 
 using namespace std;
 
@@ -14,11 +15,12 @@ private:
 	Actor* player;
 	// represent the running rooms
 	vector<vector<Room>> rooms;
+	mt19937* randomGen;
 
 protected:
 
 public:
-	Map(int width, int height, Actor* plr);
+	Map(int width, int height, Actor* plr, mt19937* gen);
 
 	void PrintMap();
 };
